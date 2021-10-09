@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import TodoList from './components/TodoList/index.jsx';
 import { useState } from 'react';
