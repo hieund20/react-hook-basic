@@ -18,7 +18,7 @@ function TodoList(props) {
     const { todos, onTodoClick } = props;
 
     function handleClick(todo) {
-        //Check if onTodoClick different from null
+        //Check if onTodoClick different from null value
         if (onTodoClick) {
             onTodoClick(todo);
         }
