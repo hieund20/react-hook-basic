@@ -1,6 +1,7 @@
 import './App.scss';
 import TodoList from './components/TodoList/index.jsx';
 import { useState } from 'react';
+import TodoForm from './components/TodoForm';
 
 function App() {
   const [todoList, setTodoList] = useState([
@@ -23,11 +24,31 @@ function App() {
     setTodoList(newTodoList);
   }
 
+  function handleTodoFormSubmit(formValue) {
+    console.log(formValue);
+    //add new todo to current todo list
+    const newTodo = {
+      id: todoList.length + 1,
+      ...formValue //get all props value from formValue
+      //or title: formValue
+    }
+
+    //Clone todoList before update
+    const newTodoList = [...todoList];
+    newTodoList.push(newTodo);
+    setTodoList(newTodoList);
+  }
+
   return (
     <div className="app">
       <h3>Todo List</h3>
-      <TodoList todos={todoList}
-        onTodoClick={handleTodoList} />
+      <TodoForm
+        onSubmit={handleTodoFormSubmit}
+      />
+      <TodoList
+        todos={todoList}
+        onTodoClick={handleTodoList}
+      />
     </div>
   );
 }
