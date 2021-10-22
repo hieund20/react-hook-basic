@@ -6,6 +6,7 @@ import TodoForm from './components/TodoForm';
 import PostList from './components/PostList';
 import Pagination from './components/Pagination';
 import PostFilterForm from './components/PostFilterForm';
+import Clock from './components/Clock';
 
 function App() {
   const [todoList, setTodoList] = useState([
@@ -92,7 +93,7 @@ function App() {
 
   return (
     <div className="app">
-      <h3>Post List</h3>
+      <h3>React hook - Clock</h3>
       {/* <TodoForm
         onSubmit={handleTodoFormSubmit}
       />
@@ -100,7 +101,7 @@ function App() {
         todos={todoList}
         onTodoClick={handleTodoList}
       /> */}
-      <PostFilterForm
+      {/* <PostFilterForm
         onSubmit={handleFilterChange}
       />
       <PostList
@@ -109,7 +110,8 @@ function App() {
       <Pagination
         pagination={pagination}
         onPageChange={handlePageChange}
-      />
+      /> */}
+      <Clock />
     </div>
   );
 }
