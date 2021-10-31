@@ -7,6 +7,7 @@ import PostList from './components/PostList';
 import Pagination from './components/Pagination';
 import PostFilterForm from './components/PostFilterForm';
 import Clock from './components/Clock';
+import UpDownNumber from './components/UpDownNumber';
 
 function App() {
   const [todoList, setTodoList] = useState([
@@ -93,7 +94,7 @@ function App() {
 
   return (
     <div className="app">
-      <h3>React hook - Clock</h3>
+      <h3>React hook - useReducer - Up down number</h3>
       {/* <TodoForm
         onSubmit={handleTodoFormSubmit}
       />
@@ -111,7 +112,8 @@ function App() {
         pagination={pagination}
         onPageChange={handlePageChange}
       /> */}
-      <Clock />
+      {/* <Clock /> */}
+      <UpDownNumber />
     </div>
   );
 }
