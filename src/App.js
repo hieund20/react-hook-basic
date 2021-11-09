@@ -8,6 +8,7 @@ import Pagination from './components/Pagination';
 import PostFilterForm from './components/PostFilterForm';
 import Clock from './components/Clock';
 import UpDownNumber from './components/UpDownNumber';
+import ScreenMode from './components/DarkLightMode';
 
 function App() {
   const [todoList, setTodoList] = useState([
@@ -94,7 +95,7 @@ function App() {
 
   return (
     <div className="app">
-      <h3>React hook - useReducer - Up down number</h3>
+      <h3>React hook - useContext- Dark / Light mode</h3>
       {/* <TodoForm
         onSubmit={handleTodoFormSubmit}
       />
@@ -113,7 +114,8 @@ function App() {
         onPageChange={handlePageChange}
       /> */}
       {/* <Clock /> */}
-      <UpDownNumber />
+      {/* <UpDownNumber /> */}
+      <ScreenMode />
     </div>
   );
 }
